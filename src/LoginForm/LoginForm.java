@@ -57,8 +57,8 @@ public class LoginForm extends JFrame {
     private void initializeUsers() {
         users = new HashMap<>();
         // Add some default users (In real application, this should be in a database)
-        users.put("admin", new User("admin", "admin123", "admin"));
-        users.put("staff", new User("staff", "staff123", "staff"));
+        users.put("admin", new User("USR001", "Administrator", "admin", "admin123", "admin"));
+        users.put("staff", new User("USR002", "Staff Kasir", "staff", "staff123", "staff"));
     }
 
     private void doLogin() {

@@ -1,5 +1,3 @@
-
-// OrderDAO.java
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -63,6 +61,7 @@ public class OrderDAO {
              ResultSet rs = stmt.executeQuery(sql)) {
             
             while (rs.next()) {
+                // Create Customer object using the new constructor
                 Customer customer = new Customer(
                     rs.getString("customer_id"),
                     rs.getString("customer_nama"),
@@ -87,6 +86,7 @@ public class OrderDAO {
     }
 
     private static List<Food> getFoodItemsForOrder(String orderId) {
+        // This method remains unchanged as it doesn't deal with Person/Customer classes
         List<Food> foods = new ArrayList<>();
         String sql = "SELECT f.* FROM food f " +
                     "JOIN order_detail od ON f.id = od.food_id " +
@@ -114,4 +114,3 @@ public class OrderDAO {
         return foods;
     }
 }
-

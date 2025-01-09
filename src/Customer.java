@@ -1,23 +1,17 @@
-public class Customer {
-    private String id;
-    private String nama;
+public class Customer extends Person {
     private String noMeja;
 
     public Customer(String id, String nama, String noMeja) {
-        this.id = id;
-        this.nama = nama;
+        super(id, nama);
         this.noMeja = noMeja;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public String getNama() {
-        return nama;
     }
 
     public String getNoMeja() {
         return noMeja;
+    }
+
+    @Override
+    public String getRole() {
+        return "customer";
     }
 }
